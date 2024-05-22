@@ -45,7 +45,8 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-mapapps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mapapps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = mapapps/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-mapapps-mapappsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mapapps-mapappsTests.release.xcconfig"; path = "Target Support Files/Pods-mapapps-mapappsTests/Pods-mapapps-mapappsTests.release.xcconfig"; sourceTree = "<group>"; };
-		EA48B5EB05770205FCF5BA16 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = mapapps/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		CCD1781D2BF3DCE500C2D203 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		EA48B5EB05770205FCF5BA16 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = mapapps/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -121,6 +122,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				CCD1781C2BF3DCC400C2D203 /* Fonts */,
 				13B07FAE1A68108700A75B9A /* mapapps */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* mapappsTests */,
@@ -151,6 +153,14 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-mapapps-mapappsTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CCD1781C2BF3DCC400C2D203 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CCD1781D2BF3DCE500C2D203 /* Ionicons.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
