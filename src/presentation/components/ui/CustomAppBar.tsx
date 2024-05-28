@@ -1,4 +1,4 @@
-import { View,  StyleSheet, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CIcon } from './CIcon';
 import { Text } from '@rneui/base';
@@ -7,7 +7,7 @@ const CustomAppBar = () => {
         <SafeAreaView>
             <View style={styles.headerContainer}>
                 <LocationBtn />
-            
+
                 <ThevenTitle />
                 <NotificationsBtn />
             </View>
@@ -18,17 +18,17 @@ export default CustomAppBar;
 
 const LocationBtn = () => {
     return (
-        <TouchableOpacity 
-        onPress={() => {}}
-        style={styles.locationbtn}>
+        <TouchableOpacity
+            onPress={() => { }}
+            style={styles.locationbtn}>
             <View>
 
-            <Text style={{color: 'black', fontSize: 14}}>Mi Ubicacion: </Text>
-            <Text style={{color: 'black', fontWeight: 'bold', fontSize: 14}}>Theven</Text>
+                <Text style={{ color: 'black', fontSize: 14 }}>Mi Ubicacion: </Text>
+                <Text style={{ color: 'black', fontWeight: 'bold', fontSize: 14 }}>Theven</Text>
             </View>
-            <View style={{flexDirection: 'column', justifyContent: 'center'}}>
+            <View style={{ flexDirection: 'column', justifyContent: 'center' }}>
 
-            <CIcon name={'chevron-down-outline'} size={20} />
+                <CIcon name={'chevron-down-outline'} size={20} />
             </View>
         </TouchableOpacity>
     );
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    thevenTitle:{
+    thevenTitle: {
         fontWeight: 'bold',
         fontStyle: 'italic',
     },

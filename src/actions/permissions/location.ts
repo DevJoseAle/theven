@@ -1,5 +1,5 @@
-import {Platform} from 'react-native';
-import {PermissionStatus} from '../../infrastructure/interfaces/permissions';
+import { Platform } from 'react-native';
+import { PermissionStatus } from '../../infrastructure/interfaces/permissions';
 import {
   check,
   openSettings,

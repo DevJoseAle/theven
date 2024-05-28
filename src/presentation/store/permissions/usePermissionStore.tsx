@@ -1,5 +1,5 @@
-import {create} from 'zustand';
-import {PermissionStatus} from '../../../infrastructure/interfaces/permissions';
+import { create } from 'zustand';
+import { PermissionStatus } from '../../../infrastructure/interfaces/permissions';
 import {
   checkLocationPermission,
   requestLocationPermission,
@@ -14,19 +14,19 @@ interface PermissionState {
   checkLocationPermission: () => Promise<PermissionStatus>;
 }
 
- const usePermissionStore = create<PermissionState>()(devtools(set => ({
+const usePermissionStore = create<PermissionState>()(devtools(set => ({
   locationStatus: 'undetermined',
 
   requestLocationPermission: async () => {
     const status = await requestLocationPermission();
 
-    set({locationStatus: status});
+    set({ locationStatus: status });
     return status;
   },
 
   checkLocationPermission: async () => {
     const status = await checkLocationPermission();
-    set({locationStatus: status});
+    set({ locationStatus: status });
     return status;
   },
 })));

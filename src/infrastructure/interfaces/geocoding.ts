@@ -1,34 +1,34 @@
 export interface ActualGeoCodingResponse {
     plus_code: PlusCode;
-    results:   ActualGeocoding[];
-    status:    string;
+    results: ActualGeocoding[];
+    status: string;
 }
 
 export interface PlusCode {
     compound_code: string;
-    global_code:   string;
+    global_code: string;
 }
 
 export interface ActualGeocoding {
     address_components: AddressComponent[];
-    formatted_address:  string;
-    geometry:           Geometry;
-    place_id:           string;
-    plus_code?:         PlusCode;
-    types:              string[];
+    formatted_address: string;
+    geometry: Geometry;
+    place_id: string;
+    plus_code?: PlusCode;
+    types: string[];
 }
 
 export interface AddressComponent {
-    long_name:  string;
+    long_name: string;
     short_name: string;
-    types:      string[];
+    types: string[];
 }
 
 export interface Geometry {
-    location:      Location;
+    location: Location;
     location_type: string;
-    viewport:      Bounds;
-    bounds?:       Bounds;
+    viewport: Bounds;
+    bounds?: Bounds;
 }
 
 export interface Bounds {
