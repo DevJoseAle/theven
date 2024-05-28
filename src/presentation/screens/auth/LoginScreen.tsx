@@ -4,7 +4,6 @@ import {
   KeyboardAvoidingView,
   Pressable,
   Text,
-  Alert,
 } from 'react-native';
 import AuthGoogleBtn from './components/AuthGoogleBtn';
 import { TouchableOpacity } from 'react-native-gesture-handler';
@@ -14,44 +13,27 @@ import { useState } from 'react';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { RootStackParams } from '../../../config/navigation/NavStack';
 import { Input } from '@rneui/themed';
-import { supabase } from '../../../supabase-client';
-import useAuthStore, { User } from '../../store/auth/useAuthStore';
+import { useFormik } from 'formik';
+import { LoginSchema } from '../../utils/validationSchema';
+import { useHandleLogin } from '../../utils/handleLogin';
+
 
 const LoginScreen = () => {
   const [isPassVisible, setIsPassVisible] = useState(false);
   const navigation = useNavigation<NavigationProp<RootStackParams>>();
-  const [userEmail, setUserEmail] = useState('');
-  const [userPassword, setUserPassword] = useState('');
 
-  const { setUser } = useAuthStore();
+  const {handleLogin, isLoading, hasError} = useHandleLogin();
 
-  const handleLogin = async (email: string, password: string) => {
-    try {
-      const { data, error } = await supabase.auth.signInWithPassword({
-        email,
-        password,
-      });
 
-      if (data) {
-        const userToSave: User = {
-          id: data.user!.id,
-          email: data.user?.email!,
-        };
-        setUser(userToSave, data.session!.access_token);
-        navigation.reset({
-          index: 0,
-          routes: [{ name: 'Home' }],
-        });
-      }
-      if (error) {
-        Alert.alert('Error', error.message);
-      }
+  const { values, setFieldValue, handleSubmit, errors, touched }:any = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+    },
+    validationSchema: LoginSchema,
+    onSubmit: async (value) => handleLogin(value.email, values.password),
+  });
 
-    } catch (error) {
-      console.log(error);
-    }
-
-  };
 
 
   return (
@@ -62,16 +44,17 @@ const LoginScreen = () => {
           keyboardType="email-address"
           inputContainerStyle={[styles.inputContainer]}
           rightIcon={<CIcon name="mail" size={30} />}
-          value={userEmail}
-          onChangeText={setUserEmail}
+          value={values.email}
+          onChangeText={(value) => setFieldValue('email', value)}
         />
+
         <Input
           placeholder="Contraseña"
           keyboardType="visible-password"
           secureTextEntry={isPassVisible}
           inputContainerStyle={[styles.inputContainer]}
-          value={userPassword}
-          onChangeText={setUserPassword}
+          value={values.password}
+          onChangeText={(value) => setFieldValue('password', value)}
           rightIcon={
             <Pressable onPress={() => setIsPassVisible(!isPassVisible)}>
               <CIcon name={isPassVisible ? 'eye-off' : 'eye'} size={30} />
@@ -87,7 +70,8 @@ const LoginScreen = () => {
             globalStyles.btnPrimary,
             { width: '80%', alignSelf: 'center', marginTop: 20 },
           ]}
-          onPress={() => handleLogin(userEmail, userPassword)}>
+          onPress={() => handleSubmit()}
+          disabled={isLoading}>
           <View
             style={{
               flexDirection: 'row',
@@ -104,6 +88,11 @@ const LoginScreen = () => {
             No tengo cuenta. Quiero Registrarme
           </Text>
         </Pressable>
+        {errors.email && touched.email ? <Text style={styles.errorText}>{errors.email}</Text> : null}
+        {errors.password && touched.password ? <Text style={styles.errorText}>{errors.password}</Text> : null}
+        {
+           hasError ? <Text style={styles.errorMsg}>Usuario o contraseña incorrectos</Text> : null
+        }
       </KeyboardAvoidingView>
     </View>
   );
@@ -143,5 +132,19 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'space-between',
     borderBottomWidth: 0,
+  },
+  errorText: {
+    marginTop: 15,
+    fontSize:20,
+    color: 'red',
+    justifyContent: 'center',
+    alignSelf: 'center',
+
+  },
+  errorMsg:{
+    marginTop:15,
+    color: 'red',
+    justifyContent: 'center',
+    alignSelf: 'center',
   },
 });

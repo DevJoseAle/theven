@@ -1,0 +1,1032 @@
+{
+    "plus_code": {
+        "compound_code": "H76W+WJG Quinta Normal, Chile",
+        "global_code": "47RFH76W+WJG"
+    },
+    "results": [
+        {
+            "address_components": [
+                {
+                    "long_name": "1227",
+                    "short_name": "1227",
+                    "types": [
+                        "street_number"
+                    ]
+                },
+                {
+                    "long_name": "Radal del Obispo Francisco Anabalón Duarte",
+                    "short_name": "Radal del Obispo Francisco Anabalón Duarte",
+                    "types": [
+                        "route"
+                    ]
+                },
+                {
+                    "long_name": "Quinta Normal",
+                    "short_name": "Quinta Normal",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Quinta Normal",
+                    "short_name": "Quinta Normal",
+                    "types": [
+                        "administrative_area_level_3",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Santiago",
+                    "short_name": "Santiago",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Región Metropolitana",
+                    "short_name": "Región Metropolitana",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Chile",
+                    "short_name": "CL",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "8501065",
+                    "short_name": "8501065",
+                    "types": [
+                        "postal_code"
+                    ]
+                }
+            ],
+            "formatted_address": "Radal del Obispo Francisco Anabalón Duarte 1227, 8501065 Quinta Normal, Región Metropolitana, Chile",
+            "geometry": {
+                "location": {
+                    "lat": -33.4377801,
+                    "lng": -70.7034079
+                },
+                "location_type": "ROOFTOP",
+                "viewport": {
+                    "northeast": {
+                        "lat": -33.4364311197085,
+                        "lng": -70.70205891970851
+                    },
+                    "southwest": {
+                        "lat": -33.4391290802915,
+                        "lng": -70.70475688029151
+                    }
+                }
+            },
+            "place_id": "ChIJq6EFL_DFYpYR-OI7-L7T9Wc",
+            "plus_code": {
+                "compound_code": "H76W+VJ Quinta Normal, Chile",
+                "global_code": "47RFH76W+VJ"
+            },
+            "types": [
+                "establishment",
+                "point_of_interest"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "1227",
+                    "short_name": "1227",
+                    "types": [
+                        "street_number"
+                    ]
+                },
+                {
+                    "long_name": "Radal del Obispo Francisco Anabalón Duarte",
+                    "short_name": "Radal del Obispo Francisco Anabalón Duarte",
+                    "types": [
+                        "route"
+                    ]
+                },
+                {
+                    "long_name": "Quinta Normal",
+                    "short_name": "Quinta Normal",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Quinta Normal",
+                    "short_name": "Quinta Normal",
+                    "types": [
+                        "administrative_area_level_3",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Santiago",
+                    "short_name": "Santiago",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Región Metropolitana",
+                    "short_name": "Región Metropolitana",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Chile",
+                    "short_name": "CL",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "8501065",
+                    "short_name": "8501065",
+                    "types": [
+                        "postal_code"
+                    ]
+                }
+            ],
+            "formatted_address": "Radal del Obispo Francisco Anabalón Duarte 1227, 8501065 Quinta Normal, Región Metropolitana, Chile",
+            "geometry": {
+                "location": {
+                    "lat": -33.4377801,
+                    "lng": -70.7034079
+                },
+                "location_type": "ROOFTOP",
+                "viewport": {
+                    "northeast": {
+                        "lat": -33.4364311197085,
+                        "lng": -70.70205891970851
+                    },
+                    "southwest": {
+                        "lat": -33.4391290802915,
+                        "lng": -70.70475688029151
+                    }
+                }
+            },
+            "place_id": "ChIJ_4dY523EYpYR0iJBYducm_c",
+            "plus_code": {
+                "compound_code": "H76W+VJ Quinta Normal, Chile",
+                "global_code": "47RFH76W+VJ"
+            },
+            "types": [
+                "street_address"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "PJ1005-Radal / Esq. Pasaje F",
+                    "short_name": "PJ1005-Radal / Esq. Pasaje F",
+                    "types": [
+                        "establishment",
+                        "point_of_interest",
+                        "transit_station"
+                    ]
+                },
+                {
+                    "long_name": "Quinta Normal",
+                    "short_name": "Quinta Normal",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Quinta Normal",
+                    "short_name": "Quinta Normal",
+                    "types": [
+                        "administrative_area_level_3",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Santiago",
+                    "short_name": "Santiago",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Región Metropolitana",
+                    "short_name": "Región Metropolitana",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Chile",
+                    "short_name": "CL",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "8501065",
+                    "short_name": "8501065",
+                    "types": [
+                        "postal_code"
+                    ]
+                }
+            ],
+            "formatted_address": "PJ1005-Radal / Esq. Pasaje F, 8501065 Quinta Normal, Región Metropolitana, Chile",
+            "geometry": {
+                "location": {
+                    "lat": -33.4376954,
+                    "lng": -70.703616
+                },
+                "location_type": "GEOMETRIC_CENTER",
+                "viewport": {
+                    "northeast": {
+                        "lat": -33.43634641970849,
+                        "lng": -70.7022670197085
+                    },
+                    "southwest": {
+                        "lat": -33.43904438029149,
+                        "lng": -70.70496498029151
+                    }
+                }
+            },
+            "place_id": "ChIJO9Wx523EYpYR2PKFSZQ6eXY",
+            "plus_code": {
+                "compound_code": "H76W+WH Quinta Normal, Chile",
+                "global_code": "47RFH76W+WH"
+            },
+            "types": [
+                "establishment",
+                "point_of_interest",
+                "transit_station"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "4971",
+                    "short_name": "4971",
+                    "types": [
+                        "street_number"
+                    ]
+                },
+                {
+                    "long_name": "Pasaje J",
+                    "short_name": "Pje. J",
+                    "types": [
+                        "route"
+                    ]
+                },
+                {
+                    "long_name": "Quinta Normal",
+                    "short_name": "Quinta Normal",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Quinta Normal",
+                    "short_name": "Quinta Normal",
+                    "types": [
+                        "administrative_area_level_3",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Santiago",
+                    "short_name": "Santiago",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Región Metropolitana",
+                    "short_name": "Región Metropolitana",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Chile",
+                    "short_name": "CL",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "8500608",
+                    "short_name": "8500608",
+                    "types": [
+                        "postal_code"
+                    ]
+                }
+            ],
+            "formatted_address": "Pje. J 4971, 8500608 Quinta Normal, Región Metropolitana, Chile",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": -33.4374379,
+                        "lng": -70.7031284
+                    },
+                    "southwest": {
+                        "lat": -33.4375903,
+                        "lng": -70.70325869999999
+                    }
+                },
+                "location": {
+                    "lat": -33.4374828,
+                    "lng": -70.70320959999999
+                },
+                "location_type": "ROOFTOP",
+                "viewport": {
+                    "northeast": {
+                        "lat": -33.4361651197085,
+                        "lng": -70.7018445697085
+                    },
+                    "southwest": {
+                        "lat": -33.4388630802915,
+                        "lng": -70.7045425302915
+                    }
+                }
+            },
+            "place_id": "ChIJuVxLw23EYpYRg2AZufh24tI",
+            "types": [
+                "premise"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "1222",
+                    "short_name": "1222",
+                    "types": [
+                        "street_number"
+                    ]
+                },
+                {
+                    "long_name": "Radal del Obispo Francisco Anabalón Duarte",
+                    "short_name": "Radal del Obispo Francisco Anabalón Duarte",
+                    "types": [
+                        "route"
+                    ]
+                },
+                {
+                    "long_name": "Quinta Normal",
+                    "short_name": "Quinta Normal",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Quinta Normal",
+                    "short_name": "Quinta Normal",
+                    "types": [
+                        "administrative_area_level_3",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Santiago",
+                    "short_name": "Santiago",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Región Metropolitana",
+                    "short_name": "Región Metropolitana",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Chile",
+                    "short_name": "CL",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "8501065",
+                    "short_name": "8501065",
+                    "types": [
+                        "postal_code"
+                    ]
+                }
+            ],
+            "formatted_address": "Radal del Obispo Francisco Anabalón Duarte 1222, 8501065 Quinta Normal, Región Metropolitana, Chile",
+            "geometry": {
+                "location": {
+                    "lat": -33.4377275,
+                    "lng": -70.7035355
+                },
+                "location_type": "RANGE_INTERPOLATED",
+                "viewport": {
+                    "northeast": {
+                        "lat": -33.43637851970851,
+                        "lng": -70.70218651970849
+                    },
+                    "southwest": {
+                        "lat": -33.4390764802915,
+                        "lng": -70.70488448029151
+                    }
+                }
+            },
+            "place_id": "El1SYWRhbCBkZWwgT2Jpc3BvIEZyYW5jaXNjbyBBbmFiYWzDs24gRHVhcnRlIDEyMjIsIFF1aW50YSBOb3JtYWwsIFJlZ2nDs24gTWV0cm9wb2xpdGFuYSwgQ2hpbGUiGxIZChQKEgnVtrnnbcRilhGw9ufFwbN5JhDGCQ",
+            "types": [
+                "street_address"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "H76W+WJ",
+                    "short_name": "H76W+WJ",
+                    "types": [
+                        "plus_code"
+                    ]
+                },
+                {
+                    "long_name": "Quinta Normal",
+                    "short_name": "Quinta Normal",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Quinta Normal",
+                    "short_name": "Quinta Normal",
+                    "types": [
+                        "administrative_area_level_3",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Santiago Province",
+                    "short_name": "Santiago Province",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Santiago Metropolitan Region",
+                    "short_name": "Santiago Metropolitan Region",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Chile",
+                    "short_name": "CL",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "H76W+WJ Quinta Normal, Chile",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": -33.437625,
+                        "lng": -70.70337499999999
+                    },
+                    "southwest": {
+                        "lat": -33.43775,
+                        "lng": -70.70349999999999
+                    }
+                },
+                "location": {
+                    "lat": -33.437682,
+                    "lng": -70.703429
+                },
+                "location_type": "GEOMETRIC_CENTER",
+                "viewport": {
+                    "northeast": {
+                        "lat": -33.4363385197085,
+                        "lng": -70.7020885197085
+                    },
+                    "southwest": {
+                        "lat": -33.4390364802915,
+                        "lng": -70.7047864802915
+                    }
+                }
+            },
+            "place_id": "GhIJIAa69gW4QMARtoMR-wStUcA",
+            "plus_code": {
+                "compound_code": "H76W+WJ Quinta Normal, Chile",
+                "global_code": "47RFH76W+WJ"
+            },
+            "types": [
+                "plus_code"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "1240-1218",
+                    "short_name": "1240-1218",
+                    "types": [
+                        "street_number"
+                    ]
+                },
+                {
+                    "long_name": "Radal del Obispo Francisco Anabalón Duarte",
+                    "short_name": "Radal del Obispo Francisco Anabalón Duarte",
+                    "types": [
+                        "route"
+                    ]
+                },
+                {
+                    "long_name": "Quinta Normal",
+                    "short_name": "Quinta Normal",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Quinta Normal",
+                    "short_name": "Quinta Normal",
+                    "types": [
+                        "administrative_area_level_3",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Santiago",
+                    "short_name": "Santiago",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Región Metropolitana",
+                    "short_name": "Región Metropolitana",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Chile",
+                    "short_name": "CL",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "8501065",
+                    "short_name": "8501065",
+                    "types": [
+                        "postal_code"
+                    ]
+                }
+            ],
+            "formatted_address": "Radal del Obispo Francisco Anabalón Duarte 1240-1218, 8501065 Quinta Normal, Región Metropolitana, Chile",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": -33.4375189,
+                        "lng": -70.7035109
+                    },
+                    "southwest": {
+                        "lat": -33.4377803,
+                        "lng": -70.7036327
+                    }
+                },
+                "location": {
+                    "lat": -33.43764960000001,
+                    "lng": -70.70357179999999
+                },
+                "location_type": "GEOMETRIC_CENTER",
+                "viewport": {
+                    "northeast": {
+                        "lat": -33.4363006197085,
+                        "lng": -70.7022228197085
+                    },
+                    "southwest": {
+                        "lat": -33.4389985802915,
+                        "lng": -70.7049207802915
+                    }
+                }
+            },
+            "place_id": "ChIJ1ba5523EYpYRsPbnxcGzeSY",
+            "types": [
+                "route"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "Quinta Normal",
+                    "short_name": "Quinta Normal",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Quinta Normal",
+                    "short_name": "Quinta Normal",
+                    "types": [
+                        "administrative_area_level_3",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Santiago Province",
+                    "short_name": "Santiago Province",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Santiago Metropolitan Region",
+                    "short_name": "Santiago Metropolitan Region",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Chile",
+                    "short_name": "CL",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Quinta Normal, Santiago Metropolitan Region, Chile",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": -33.4077306,
+                        "lng": -70.67142439999999
+                    },
+                    "southwest": {
+                        "lat": -33.4488325,
+                        "lng": -70.72242989999999
+                    }
+                },
+                "location": {
+                    "lat": -33.4315281,
+                    "lng": -70.69240739999999
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": -33.4077306,
+                        "lng": -70.67142439999999
+                    },
+                    "southwest": {
+                        "lat": -33.4488325,
+                        "lng": -70.72242989999999
+                    }
+                }
+            },
+            "place_id": "ChIJnePXWBDEYpYRGQ68gdAXWGg",
+            "types": [
+                "locality",
+                "political"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "Quinta Normal",
+                    "short_name": "Quinta Normal",
+                    "types": [
+                        "administrative_area_level_3",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Quinta Normal",
+                    "short_name": "Quinta Normal",
+                    "types": [
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Santiago Province",
+                    "short_name": "Santiago Province",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Santiago Metropolitan Region",
+                    "short_name": "Santiago Metropolitan Region",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Chile",
+                    "short_name": "CL",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Quinta Normal, Santiago Metropolitan Region, Chile",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": -33.407711,
+                        "lng": -70.671464
+                    },
+                    "southwest": {
+                        "lat": -33.4488021,
+                        "lng": -70.7225847
+                    }
+                },
+                "location": {
+                    "lat": -33.4315281,
+                    "lng": -70.69240739999999
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": -33.407711,
+                        "lng": -70.671464
+                    },
+                    "southwest": {
+                        "lat": -33.4488021,
+                        "lng": -70.7225847
+                    }
+                }
+            },
+            "place_id": "ChIJF_SuRRTEYpYRCAkdmo0_mR8",
+            "types": [
+                "administrative_area_level_3",
+                "political"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "Santiago",
+                    "short_name": "Santiago",
+                    "types": [
+                        "colloquial_area",
+                        "locality",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Santiago Province",
+                    "short_name": "Santiago Province",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Santiago Metropolitan Region",
+                    "short_name": "Santiago Metropolitan Region",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Chile",
+                    "short_name": "CL",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Santiago, Santiago Metropolitan Region, Chile",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": -33.2713874,
+                        "lng": -70.42678069999999
+                    },
+                    "southwest": {
+                        "lat": -33.6741885,
+                        "lng": -70.8328819
+                    }
+                },
+                "location": {
+                    "lat": -33.4488897,
+                    "lng": -70.66926549999999
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": -33.2713874,
+                        "lng": -70.42678069999999
+                    },
+                    "southwest": {
+                        "lat": -33.6741885,
+                        "lng": -70.8328819
+                    }
+                }
+            },
+            "place_id": "ChIJL68lBEHFYpYRMQkPQDzVdYQ",
+            "types": [
+                "colloquial_area",
+                "locality",
+                "political"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "Santiago Province",
+                    "short_name": "Santiago Province",
+                    "types": [
+                        "administrative_area_level_2",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Santiago Metropolitan Region",
+                    "short_name": "Santiago Metropolitan Region",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Chile",
+                    "short_name": "CL",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Santiago Province, Santiago Metropolitan Region, Chile",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": -33.0967051,
+                        "lng": -70.17557099999999
+                    },
+                    "southwest": {
+                        "lat": -33.6272454,
+                        "lng": -70.9551726
+                    }
+                },
+                "location": {
+                    "lat": -33.3515335,
+                    "lng": -70.3360691
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": -33.0967051,
+                        "lng": -70.17557099999999
+                    },
+                    "southwest": {
+                        "lat": -33.6272454,
+                        "lng": -70.9551726
+                    }
+                }
+            },
+            "place_id": "ChIJlVV_vxvJYpYRziXz-KE8chY",
+            "types": [
+                "administrative_area_level_2",
+                "political"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "Santiago Metropolitan Region",
+                    "short_name": "Santiago Metropolitan Region",
+                    "types": [
+                        "administrative_area_level_1",
+                        "political"
+                    ]
+                },
+                {
+                    "long_name": "Chile",
+                    "short_name": "CL",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Santiago Metropolitan Region, Chile",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": -32.9219245,
+                        "lng": -69.76959859999999
+                    },
+                    "southwest": {
+                        "lat": -34.2910418,
+                        "lng": -71.7154797
+                    }
+                },
+                "location": {
+                    "lat": -33.4843354,
+                    "lng": -70.6216794
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": -32.9219245,
+                        "lng": -69.76959859999999
+                    },
+                    "southwest": {
+                        "lat": -34.2910418,
+                        "lng": -71.7154797
+                    }
+                }
+            },
+            "place_id": "ChIJUR74fWpvYpYR2oNLRG3CzWA",
+            "types": [
+                "administrative_area_level_1",
+                "political"
+            ]
+        },
+        {
+            "address_components": [
+                {
+                    "long_name": "Chile",
+                    "short_name": "CL",
+                    "types": [
+                        "country",
+                        "political"
+                    ]
+                }
+            ],
+            "formatted_address": "Chile",
+            "geometry": {
+                "bounds": {
+                    "northeast": {
+                        "lat": -17.4983649,
+                        "lng": -66.3327
+                    },
+                    "southwest": {
+                        "lat": -56.6233,
+                        "lng": -110.0281
+                    }
+                },
+                "location": {
+                    "lat": -35.675147,
+                    "lng": -71.542969
+                },
+                "location_type": "APPROXIMATE",
+                "viewport": {
+                    "northeast": {
+                        "lat": -17.4983649,
+                        "lng": -66.3327
+                    },
+                    "southwest": {
+                        "lat": -56.6233,
+                        "lng": -110.0281
+                    }
+                }
+            },
+            "place_id": "ChIJL68lBEHFYpYRHbkCERPhBQU",
+            "types": [
+                "country",
+                "political"
+            ]
+        }
+    ],
+    "status": "OK"
+}

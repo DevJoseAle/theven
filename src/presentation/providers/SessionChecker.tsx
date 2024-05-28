@@ -1,9 +1,8 @@
-
 import { PropsWithChildren, useEffect } from 'react';
 import { supabase } from '../../supabase-client';
 import AsyncStorage from '@react-native-async-storage/async-storage';
- import { AuthStorage } from '../../config/auth/authStorage';
 import useAuthStore, { User } from '../store/auth/useAuthStore';
+import { AppState } from 'react-native';
 
 const SessionChecker = ({children}: PropsWithChildren) => {
   const setUser = useAuthStore((state) => state.setUser);
@@ -13,15 +12,23 @@ const SessionChecker = ({children}: PropsWithChildren) => {
     //  await AuthStorage.clearToken();
     const token = await AsyncStorage.getItem('token');
     const userId = await AsyncStorage.getItem('id');
-    // setUser()
+    const email = await AsyncStorage.getItem('email');
+
+    AppState.addEventListener('change', (state) => {
+      if (state === 'active') {
+        supabase.auth.startAutoRefresh();
+      } else {
+        supabase.auth.stopAutoRefresh();
+      }
+    });
 
     if (token && userId) {
       const { data: user} = await supabase.auth.getUser(token);
+      if(!user || user.user === null || user.user.email === null) {return;}
       const userData: User = {
         id: userId,
-        email: user.user!.email || '',
+        email: email!,
       };
-      console.log(1);
       setUser(userData, token);
       }else{
         clearUser();
@@ -34,14 +41,14 @@ const SessionChecker = ({children}: PropsWithChildren) => {
 
     const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
       if (event === 'SIGNED_IN' && session) {
-        console.log(1);
+
         const user = session.user!;
         setUser({ id: user.id, email: user.email! }, session.access_token);
-        console.log(2);
+
       } else if (event === 'SIGNED_OUT') {
-        console.log(3);
+
         clearUser();
-        console.log(4);
+
       }
     });
     return () => {

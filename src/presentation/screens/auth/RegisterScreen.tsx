@@ -1,4 +1,4 @@
-import {View, StyleSheet, KeyboardAvoidingView, Pressable} from 'react-native';
+import {View, StyleSheet, KeyboardAvoidingView, Pressable, Alert} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {globalStyles} from '../../../config/theme/globalStyles';
 import {CIcon} from '../../components/components';
@@ -6,22 +6,45 @@ import { useState} from 'react';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {RootStackParams} from '../../../config/navigation/NavStack';
 import {Input, Text} from '@rneui/themed';
-import { signUpWithEmail } from '../../../actions/auth/signUpWithEmail';
+import { supabase } from '../../../supabase-client';
+import { RegisterSchema } from '../../utils/validationSchema';
+import { useFormik } from 'formik';
 
 const RegisterScreen = () => {
 
   const [isPassVisible, setIsPassVisible] = useState(false);
-  const [inputEmail, setInputEmail] = useState('');
-  const [inputPassword, setInputPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const navigation = useNavigation<NavigationProp<RootStackParams>>();
 
-  const handleRegister =  () => {
+  const { values, setFieldValue, handleSubmit, errors, touched }:any = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+    },
+    validationSchema: RegisterSchema,
+    onSubmit: async (value) => signUpWithEmail(value.email, values.password),
+  });
+  async function signUpWithEmail(inputEmail:string, inputPassword: string) {
     setIsLoading(true);
-    signUpWithEmail(inputEmail, inputPassword);
-    setIsLoading(true);
+    const {
+      data: { session },
+      error,
+    } = await supabase.auth.signUp({
+      email: inputEmail.toString().toLowerCase(),
+      password: inputPassword,
+    });
 
-  };
+    if (error) {Alert.alert(error.message);}
+    if (!session) {Alert.alert('Please check your inbox for email verification!');}
+    setIsLoading(false);
+
+    if (session) {
+      navigation.reset({
+        index: 0,
+        routes: [{ name: 'Home' }],
+      });
+    }
+  }
 
   return (
     <View style={styles.container}>
@@ -36,8 +59,8 @@ const RegisterScreen = () => {
           keyboardType="email-address"
           inputContainerStyle={[styles.inputContainer]}
           rightIcon={<CIcon name="mail" size={30} />}
-          value={inputEmail}
-          onChangeText={(text) => setInputEmail(text)}
+          value={values.email}
+          onChangeText={(text) => setFieldValue('email', text)}
           autoCapitalize="none"
         />
         <Input
@@ -46,8 +69,8 @@ const RegisterScreen = () => {
           autoCapitalize="none"
           secureTextEntry={isPassVisible}
           inputContainerStyle={[styles.inputContainer]}
-          value={inputPassword}
-          onChangeText={(text) => setInputPassword(text)}
+          value={values.password}
+          onChangeText={(text) => setFieldValue('password', text)}
           rightIcon={
             <Pressable onPress={() => setIsPassVisible(!isPassVisible)}>
               <CIcon name={isPassVisible ? 'eye-off' : 'eye'} size={30} />
@@ -60,7 +83,7 @@ const RegisterScreen = () => {
             globalStyles.btnPrimary,
             {width: '80%', alignSelf: 'center', marginTop: 10},
           ]}
-          onPress={handleRegister}>
+          onPress={() => handleSubmit()}>
           <View
             style={{
               flexDirection: 'row',
@@ -76,6 +99,8 @@ const RegisterScreen = () => {
             ¡Presiona Aquí si ya tienes cuenta!.
           </Text>
         </Pressable>
+        {errors.email && touched.email ? <Text style={styles.errorText}>{errors.email}</Text> : null}
+        {errors.password && touched.password ? <Text style={styles.errorText}>{errors.password}</Text> : null}
       </KeyboardAvoidingView>
     </View>
   );
@@ -115,5 +140,19 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'space-between',
     borderBottomWidth: 0,
+  },
+  errorText: {
+    marginTop: 15,
+    fontSize:20,
+    color: 'red',
+    justifyContent: 'center',
+    alignSelf: 'center',
+
+  },
+  errorMsg:{
+    marginTop:15,
+    color: 'red',
+    justifyContent: 'center',
+    alignSelf: 'center',
   },
 });

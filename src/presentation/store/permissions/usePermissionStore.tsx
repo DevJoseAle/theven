@@ -4,6 +4,7 @@ import {
   checkLocationPermission,
   requestLocationPermission,
 } from '../../../actions/permissions/location';
+import { devtools } from 'zustand/middleware';
 
 interface PermissionState {
   locationStatus: PermissionStatus;
@@ -13,7 +14,7 @@ interface PermissionState {
   checkLocationPermission: () => Promise<PermissionStatus>;
 }
 
-export const usePermissionStore = create<PermissionState>()(set => ({
+ const usePermissionStore = create<PermissionState>()(devtools(set => ({
   locationStatus: 'undetermined',
 
   requestLocationPermission: async () => {
@@ -28,4 +29,6 @@ export const usePermissionStore = create<PermissionState>()(set => ({
     set({locationStatus: status});
     return status;
   },
-}));
+})));
+
+export default usePermissionStore;
