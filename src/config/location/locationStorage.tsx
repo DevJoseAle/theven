@@ -3,9 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 export class LocationStorage{
 
     static async saveLocationToStorage(location: any) {
-        console.log('LOCATION ----',location);
         const actualLocation = await AsyncStorage.getItem('location');
-        console.log('ACTUAL LOCATION ----',actualLocation);
         try {
             if(actualLocation !== null) {
             await AsyncStorage.removeItem('location');

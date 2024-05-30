@@ -14,7 +14,6 @@ const PermissionChecker = ({ children }: PropsWithChildren) => {
       console.log('Permission denied');
     }
 
-    console.log(locationStatus);
   }, [locationStatus]);
 
   useEffect(() => {

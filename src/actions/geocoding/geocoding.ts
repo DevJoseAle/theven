@@ -12,7 +12,6 @@ export const getAddressFromCoordinates = async (latitude: number, longitude: num
         const data: ActualGeocoding[] = response.data.results;
         const geoCoding = GeocodingAddress.geocodingMapper(data[0]);
 
-        console.log('Llegué Aqui', geoCoding);
         return geoCoding;
 
 

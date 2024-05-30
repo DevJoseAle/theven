@@ -5,7 +5,6 @@ export const getCurrentLocation = async (): Promise<UserLocation> => {
   return new Promise((resolve, reject) => {
     Geolocation.getCurrentPosition(
       info => {
-        console.log(info.coords);
         resolve({
           latitude: info.coords.latitude,
           longitude: info.coords.longitude,

@@ -20,10 +20,10 @@ const AddressGeoBtn = ({ lat, lng }: Props) => {
 
   const getLocation = async () => {
     try {
-      console.log('Geolocation antes del data');
+
       const data = await getAddressFromCoordinates(lat, lng);
       if (data === undefined) { return 'No se encontró dirección'; }
-      console.log('Geolocation post data', data);
+
       setActualLocation(data);
     } catch (error) {
       console.log('error', error);

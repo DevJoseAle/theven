@@ -2,11 +2,16 @@ import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CIcon } from './CIcon';
 import { Text } from '@rneui/base';
+import { useEffect } from 'react';
+import useLocationStore from '../../store/location/useLocationStore';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
+import { RootStackParams } from '../../../config/navigation/NavStack';
 const CustomAppBar = () => {
     return (
-        <SafeAreaView>
+        <SafeAreaView edges={['top']} style={{backgroundColor:'#2f323f'}} >
             <View style={styles.headerContainer}>
-                <LocationBtn />
+                <LocationBtn
+                 />
 
                 <ThevenTitle />
                 <NotificationsBtn />
@@ -17,18 +22,24 @@ const CustomAppBar = () => {
 export default CustomAppBar;
 
 const LocationBtn = () => {
+    const navigation = useNavigation<NavigationProp<RootStackParams>>();
+    const lastKnownLocation  = useLocationStore(state => state.address?.full_address);
+
+    useEffect(() => {
+
+     }, [lastKnownLocation]);
     return (
         <TouchableOpacity
-            onPress={() => { }}
+            onPress={() => { navigation.navigate('Maps');}}
             style={styles.locationbtn}>
             <View>
 
-                <Text style={{ color: 'black', fontSize: 14 }}>Mi Ubicacion: </Text>
-                <Text style={{ color: 'black', fontWeight: 'bold', fontSize: 14 }}>Theven</Text>
+                <Text style={{ color: 'white', fontSize: 14 }}>Mi Ubicacion: </Text>
+                <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 14 }} numberOfLines={1}>{lastKnownLocation === undefined ? 'No hay ubicación' : lastKnownLocation}</Text>
             </View>
             <View style={{ flexDirection: 'column', justifyContent: 'center' }}>
 
-                <CIcon name={'chevron-down-outline'} size={20} />
+                <CIcon name={'chevron-down-outline'} size={20} color={'#FE4655A1'}/>
             </View>
         </TouchableOpacity>
     );
@@ -45,7 +56,7 @@ const ThevenTitle = () => {
 const NotificationsBtn = () => {
     return (
         <View style={styles.notificationsBtn}>
-            <CIcon name={'notifications'} size={30} />
+            <CIcon name={'notifications'} size={30} color={'#CACACA'} />
         </View>
     );
 };
@@ -65,11 +76,15 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     thevenTitleContainer: {
+        marginLeft: 30,
+        borderRadius: 50,
         flex: 1,
+        backgroundColor:'#fe4655',
         justifyContent: 'center',
         alignItems: 'center',
     },
     thevenTitle: {
+        color: 'white',
         fontWeight: 'bold',
         fontStyle: 'italic',
     },
