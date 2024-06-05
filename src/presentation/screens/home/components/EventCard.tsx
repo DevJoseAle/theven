@@ -19,7 +19,7 @@ export const EventCard = ({ event }: Props) => {
         <View style={styles.shadowContainer}>
             <View style={styles.contentContainer}>
 
-            
+
             <Pressable
                 onPress={() => navigation.navigate('Event', { eventId: event.id! })}
                 style={{ flex: 1, width: '100%' }}>
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.4,
         shadowRadius: 3,
         elevation: 8,
-        backgroundColor:'#2f323f' // Color de fondo semi-transparente
+        backgroundColor:'#2f323f', // Color de fondo semi-transparente
     },
     contentContainer: {
         flex: 1,
