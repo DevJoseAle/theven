@@ -3,7 +3,7 @@ export const primaryColor  = '#457C9E';
 
 export const globalStyles = StyleSheet.create({
   btnPrimary: {
-    backgroundColor: 'black',
+    backgroundColor: '#fe4655',
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 100,
@@ -16,6 +16,6 @@ export const globalStyles = StyleSheet.create({
     fontSize: 18,
   },
   colorBtn:{
-    backgroundColor: '#457C9E',
+    backgroundColor: '#fe4655',
   },
 });

@@ -48,10 +48,11 @@ const useAuthStore = create<AuthState>()(devtools((set) => ({
 
   //Limpiar el state
   clearUser: () => {
-    AuthStorage.clearToken();
-    LocationStorage.removeLocationFromStorage();
-    AsyncStorage.clear();
     set({ user: null, token: null, isAuthenticated: 'NoAuthenticated', id: null, email: null });
+        AuthStorage.clearToken();
+        LocationStorage.removeLocationFromStorage();
+        AsyncStorage.clear();
+
   },
 
   //Inicializar el state

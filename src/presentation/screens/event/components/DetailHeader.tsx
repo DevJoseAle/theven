@@ -2,7 +2,12 @@ import { Text } from '@rneui/base';
 import { View, useWindowDimensions, Image, TouchableOpacity } from 'react-native';
 import { CIcon } from '../../../components/ui/CIcon';
 import { useNavigation } from '@react-navigation/native';
-const DetailHeader = () => {
+import { EventByIDEntity } from '../../../../domain/events/eventByIdEntity';
+
+interface Props {
+    event: EventByIDEntity
+}
+const DetailHeader = ({event}: Props) => {
     const navigation = useNavigation();
     const { height: totalHeight } = useWindowDimensions();
     return (
@@ -17,13 +22,13 @@ const DetailHeader = () => {
                         source={require('../../../../assets/images/event.jpeg')}
                     />
 
-                    <View style={{ flexDirection: 'row', width: '100%', justifyContent: 'space-between', padding: 10, backgroundColor: '#44444492', position: 'absolute', bottom: 0 }}>
-                        <View style={{ paddingHorizontal: 5 }}>
-                            <Text h4 h4Style={{ color: 'white', fontWeight: 'bold' }}>Nombre Event</Text>
-                            <Text style={{ color: '#E2E2E2', fontWeight: '500' }}>Andres Bello 123, providencia</Text>
+                    <View style={{ flexDirection: 'row',height: '20%', width: '100%', justifyContent: 'space-between', padding: 10, backgroundColor: '#44444492', position: 'absolute', bottom: 0 }}>
+                        <View style={{ paddingHorizontal: 5, width: '74%'}}>
+                            <Text numberOfLines={2} h4 h4Style={{ color: 'white', fontWeight: 'bold' }}>{event.eventName}</Text>
+                            <Text numberOfLines={1} style={{ color: '#E2E2E2', fontWeight: '500' }}>Andres Bello 123, providencia</Text>
                         </View>
-                        <View style={{ flexDirection: 'column', justifyContent: 'center', width: '25%', height: 50, backgroundColor: 'white', borderRadius: 50 }} >
-                            <Text style={{ color: '#323232', textAlign: 'center', fontWeight: 'bold', alignSelf: 'center' }}>$: 129.999</Text>
+                        <View style={{ flexDirection: 'column', justifyContent: 'center', width: '25%', height: 50, backgroundColor: 'white', borderRadius: 50, alignSelf: 'center' }} >
+                            <Text numberOfLines={1} style={{ color: '#323232', textAlign: 'center', fontWeight: 'bold', alignSelf: 'center' }}>$: {event.price}</Text>
                         </View>
                     </View>
 

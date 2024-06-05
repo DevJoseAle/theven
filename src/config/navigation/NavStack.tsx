@@ -60,15 +60,16 @@ export const NavStack = () => {
 
         }} />
       <Stack.Screen name="Loading" component={LoadingScreen} />
+      {/* eslint-disable-next-line react/no-unstable-nested-components */}
       <Stack.Screen name="Home" component={HomeScreen} options={{header: () => <CustomAppBar />}} />
       <Stack.Screen options={{
-        headerShown: true, 
-        headerStyle: {backgroundColor: '#2f323f'}, 
-        headerTitleStyle: {color: 'white'}, 
+        headerShown: true,
+        headerStyle: {backgroundColor: '#2f323f'},
+        headerTitleStyle: {color: 'white'},
         title: 'Tu Ubicación',
         headerBackTitleStyle: {color: 'white'},
-      }} 
-        name="Maps" 
+      }}
+        name="Maps"
         component={MapsScreen} />
       <Stack.Screen name="Permission" component={PermissionScreen} />
       <Stack.Screen name="Event" component={EventScreen}  options={{

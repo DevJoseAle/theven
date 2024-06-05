@@ -22,8 +22,6 @@ const MapsScreen = () => {
      } else if (locationStatus !== 'undetermined') {
        console.log('DESDE MAPS Permission denied');
      }
-
-     console.log('DESDE MAPS Permission denied',locationStatus);
    }, [locationStatus]);
 
    useEffect(() => {

@@ -1,4 +1,4 @@
-import { View, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, Pressable } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CIcon } from './CIcon';
 import { Text } from '@rneui/base';
@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import useLocationStore from '../../store/location/useLocationStore';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { RootStackParams } from '../../../config/navigation/NavStack';
+import useAuthStore from '../../store/auth/useAuthStore';
 const CustomAppBar = () => {
     return (
         <SafeAreaView edges={['top']} style={{backgroundColor:'#2f323f'}} >
@@ -47,10 +48,25 @@ const LocationBtn = () => {
 
 
 const ThevenTitle = () => {
+
+    const clearUser = useAuthStore(state => state.clearUser);
+    const  navigation = useNavigation<NavigationProp<RootStackParams>>();
     return (
-        <View style={styles.thevenTitleContainer}>
+        <Pressable
+        onPress={() => {
+            navigation.reset({
+                index: 0,
+                routes: [{ name: 'Login' }],
+            });
+            clearUser();
+        }}
+        style={styles.thevenTitleContainer}
+        >
+
+        <View >
             <Text style={styles.thevenTitle} h4 >Theven</Text>
         </View>
+        </Pressable>
     );
 };
 const NotificationsBtn = () => {

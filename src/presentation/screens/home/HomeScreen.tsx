@@ -16,6 +16,7 @@ const HomeScreen = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [allCategories, setAllCategories] = useState<CategoryEntity[]>([]);
   const getNewEvents = async () => {
+    console.log(allCategories);
     try {
       const events = await getEventsForTimeline();
       if (events === undefined) { return; }

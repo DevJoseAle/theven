@@ -13,7 +13,6 @@ const SessionChecker = ({children}: PropsWithChildren) => {
     const token = await AsyncStorage.getItem('token');
     const userId = await AsyncStorage.getItem('id');
     const email = await AsyncStorage.getItem('email');
-
     AppState.addEventListener('change', (state) => {
       if (state === 'active') {
         supabase.auth.startAutoRefresh();
@@ -24,14 +23,16 @@ const SessionChecker = ({children}: PropsWithChildren) => {
 
     if (token && userId) {
       const { data: user} = await supabase.auth.getUser(token);
-      if(!user || user.user === null || user.user.email === null) {return;}
+      if(!user || user.user === null || user.user.email === null) { console.log('Invalid user data:', user); return;}
       const userData: User = {
         id: userId,
         email: email!,
       };
       setUser(userData, token);
       }else{
+        console.log('Clearing user due to missing token or userId');
         clearUser();
+
       }
     };
 
@@ -40,6 +41,7 @@ const SessionChecker = ({children}: PropsWithChildren) => {
     readLocalStorage();
 
     const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
+      
       if (event === 'SIGNED_IN' && session) {
 
         const user = session.user!;
