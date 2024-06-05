@@ -5,17 +5,16 @@ import LoadingScreen from '../../presentation/screens/loading/LoadingScreen';
 import MapsScreen from '../../presentation/screens/maps/MapScreen';
 import PermissionScreen from '../../presentation/screens/permission/PermissionScreen';
 import RegisterScreen from '../../presentation/screens/auth/RegisterScreen';
-import HomeScreen from '../../presentation/screens/home/HomeScreen';
 import useAuthStore from '../../presentation/store/auth/useAuthStore';
-import CustomAppBar from '../../presentation/components/ui/CustomAppBar';
 import {EventScreen} from '../../presentation/screens/event/EventScreen';
+import { BottomTabNav } from './BottomTabNav';
 
 export type RootStackParams = {
   Loading: undefined;
   Register: undefined;
   Login: undefined;
   Maps: undefined;
-  Home: undefined;
+  Main: undefined;
   Permission: undefined;
   Event: {eventId: string};
 
@@ -47,7 +46,7 @@ export const NavStack = () => {
 
   return (
     <Stack.Navigator
-      initialRouteName={isAuthenticated === 'Authenticated' ? 'Home' : 'Login'}
+      initialRouteName={isAuthenticated === 'Authenticated' ? 'Main' : 'Login'}
       screenOptions={{
         cardStyle: {backgroundColor: 'white'},
       }}>
@@ -60,8 +59,7 @@ export const NavStack = () => {
 
         }} />
       <Stack.Screen name="Loading" component={LoadingScreen} />
-      {/* eslint-disable-next-line react/no-unstable-nested-components */}
-      <Stack.Screen name="Home" component={HomeScreen} options={{header: () => <CustomAppBar />}} />
+      <Stack.Screen name="Main" component={BottomTabNav} options={{ headerShown: false }} />
       <Stack.Screen options={{
         headerShown: true,
         headerStyle: {backgroundColor: '#2f323f'},
@@ -74,6 +72,7 @@ export const NavStack = () => {
       <Stack.Screen name="Permission" component={PermissionScreen} />
       <Stack.Screen name="Event" component={EventScreen}  options={{
         headerShown: false,
+        BottomTabNav: {visible: false},
       }}/>
     </Stack.Navigator>
   );

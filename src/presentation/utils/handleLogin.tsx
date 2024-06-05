@@ -30,8 +30,7 @@ const handleLogin = async (email: string, password: string) => {
         };
         setUser(userToSave, data.session!.access_token);
         navigation.reset({
-          index: 0,
-          routes: [{ name: 'Home' }],
+          routes: [{ name: 'Main' }],
         });
         setTimeout(() => {
           setIsLoading(false);

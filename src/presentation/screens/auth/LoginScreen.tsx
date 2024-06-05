@@ -37,7 +37,6 @@ const LoginScreen = () => {
     onSubmit: async (value) => handleLogin(value.email, values.password),
   });
 
-  console.log('Login REndered');
 
   return (
 
