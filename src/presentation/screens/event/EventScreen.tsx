@@ -10,6 +10,7 @@ import DetailBody from './components/DetailBody';
 interface Props extends StackScreenProps<RootStackParams, 'Event'> { }
 export const EventScreen = ({route}: Props) => {
   const  {eventId} = route.params;
+  console.log(route.params);
    const [singleEvent, setSingleEvent] = useState<EventByIDEntity>({} as EventByIDEntity);
    const getEvent = async () => {
      try {
@@ -29,7 +30,7 @@ export const EventScreen = ({route}: Props) => {
 
       <DetailHeader event={singleEvent} />
       <DetailBody event={singleEvent} />
-      <View style={{height: 200}} />
+      <View style={{height: 50}} />
     </ScrollView>
   );
 };

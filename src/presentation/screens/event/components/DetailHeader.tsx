@@ -19,7 +19,7 @@ const DetailHeader = ({event}: Props) => {
                     <Image
                         resizeMode="cover"
                         style={{ flex: 1, width: '100%' }}
-                        source={require('../../../../assets/images/event.jpeg')}
+                        source={require('../../../../assets/images/evento2.jpg')}
                     />
 
                     <View style={{ flexDirection: 'row',height: '20%', width: '100%', justifyContent: 'space-between', padding: 10, backgroundColor: '#44444492', position: 'absolute', bottom: 0 }}>
