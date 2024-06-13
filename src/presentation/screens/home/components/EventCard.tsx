@@ -54,17 +54,22 @@ export const EventCard = ({ event }: Props) => {
                                 title="Fc"
                                 containerStyle={{ backgroundColor: '#3d4db7' }}
                             />
+                            <Pressable
+                            onPress={() => console.log('pressionado')}>
 
                             <Text style={{ color: '#EBEBEB', fontSize: 18, fontWeight: 'bold', marginLeft: 10, alignSelf: 'center' }}>Eventos SPA</Text>
+                            </Pressable>
 
                         </View>
-                        <View>
+                        <>
                             {/* Boton Seguir */}
-                            <TouchableOpacity
+                            <Pressable
+
+                                onPress={() => console.log('Seguir!')}
                                 style={[{ flexDirection: 'row', height: 30, width: 90, justifyContent: 'center', alignItems: 'center', borderRadius: 30 }, globalStyles.colorBtn]}>
                                 <Text style={{ fontWeight: 'bold', alignContent: 'center', alignItems: 'center', justifyContent: 'center', textAlign: 'center', color: '#FFFFFF' }}>Seguir</Text>
-                            </TouchableOpacity>
-                        </View>
+                            </Pressable>
+                        </>
                     </View>
 
                     {/* Info del evento */}

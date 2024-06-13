@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { EventByIDEntity } from '../../../../domain/events/eventByIdEntity';
 import { getCreatorById } from '../../../utils/getCreatorById';
 import LoadingScreen from '../../loading/LoadingScreen';
+import MiniMap from '../../home/components/MiniMap';
 
 interface Props {
     event: EventByIDEntity
@@ -14,10 +15,13 @@ const DetailBody = ({ event }: Props) => {
     const [openSection, setOpenSection] = useState(false);
     const [userInfo, setUserInfo] = useState<string>();
     const [loading, setLoading] = useState(true);
-
+    const [longitude, setLongitude] = useState('');
+    const [latitude, setLatitude] = useState('');
     const getuser = async (id: string) => {
         const user = await getCreatorById(id);
         setUserInfo(user);
+        setLatitude(event.location[0]);
+        setLongitude(event.location[1]);
     };
     useEffect(() => {
         setLoading(true);
@@ -25,6 +29,9 @@ const DetailBody = ({ event }: Props) => {
         setLoading(false);
     }, [event]);
     if (loading) { return <LoadingScreen />; }
+
+    console.log(latitude);
+    console.log( longitude);
     return (
         <View
             style={{ flex: 1, marginHorizontal: 18, marginVertical: 10, backgroundColor: '#2f323f' }}
@@ -35,7 +42,7 @@ const DetailBody = ({ event }: Props) => {
                 height: 60,
                 flexDirection: 'row',
                 justifyContent: 'space-between',
-                backgroundColor: '#fffbd9',
+                backgroundColor: '#D4D4D4',
                 borderRadius: 20,
 
             }}>
@@ -197,6 +204,12 @@ const DetailBody = ({ event }: Props) => {
                     <Divider style={{ width: '99%', marginTop: 10, justifyContent: 'center', alignSelf: 'center' }} />
                 </View>
             </View>
+
+            <View style={{width: '100%', flex:1, height: 150, marginTop: 10}}>
+                <Text style={{fontWeight: 'bold', color: 'white', fontSize: 18}}>Minimapa Aqui:</Text>
+                <MiniMap lat={latitude} lng={longitude} />
+            </View>
+            <View style={{height: 70}} />
         </View>
     );
 };

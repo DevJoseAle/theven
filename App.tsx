@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import 'react-native-devsettings/withAsyncStorage';
+
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { NavStack } from './src/config/navigation/NavStack';

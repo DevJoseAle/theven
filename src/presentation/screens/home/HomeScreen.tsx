@@ -3,8 +3,6 @@
 import { useEffect, useState } from 'react';
 import { getEventsForTimeline } from '../../../actions/events/getEventsForTimeline';
 import { EventTimeLineEntity } from '../../../domain/events/eventTimeLineEntity';
-import { getCategories } from '../../../actions/events/getCategories';
-import { CategoryEntity } from '../../../domain/events/categoriesEntity';
 import EventList from './components/EventList';
 import LoadingScreen from '../loading/LoadingScreen';
 import { View } from 'react-native';
@@ -14,9 +12,8 @@ const HomeScreen = () => {
 
   const [newEvents, setNewEvents] = useState<EventTimeLineEntity[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [allCategories, setAllCategories] = useState<CategoryEntity[]>([]);
   const getNewEvents = async () => {
-    console.log(allCategories);
+
     try {
       const events = await getEventsForTimeline();
       if (events === undefined) { return; }
@@ -26,18 +23,8 @@ const HomeScreen = () => {
     }
   };
 
-  const getAllCategories = async () => {
-    try {
-      const categories = await getCategories();
-      if (categories === undefined) { return; }
-      setAllCategories(categories);
-    } catch (error) {
-      console.log(error);
-    }
-  };
   useEffect(() => {
     setIsLoading(true);
-    getAllCategories();
     getNewEvents();
     setIsLoading(false);
   }, []);
