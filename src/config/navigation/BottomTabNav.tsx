@@ -14,6 +14,32 @@ import { Icon } from '@rneui/themed';
 
 const Tab = createBottomTabNavigator();
 
+//Definicion de options y componentes:
+
+const HomeScreenOptions = {
+  header: () => <CustomAppBar />,
+  tabBarIcon: ({ color, size }: { color: string; size: number }) => <Icon color={color} size={size} name="home-outline" type="ionicon" />,
+};
+
+const ScheduleScreenOptions = {
+  headerShown: false,
+  tabBarIcon: ({ color, size }: { color: string; size: number }) => <Icon color={color} size={size} name="calendar-outline" type="ionicon" />,
+};
+
+const CreateEventOptions = {
+  tabBarIcon: ({ color }: { color: string}) => <Icon color={color} size={40} name="add-circle-outline" type="ionicon" />,
+};
+
+const SearchScreenOptions = {
+  tabBarIcon: ({ color, size }: { color: string; size: number }) => <Icon color={color} size={size} name="search-outline" type="ionicon" />,
+};
+
+const ProfileScreenOptions = {
+  headerShown: false,
+  tabBarIcon: ({ color, size }: { color: string; size: number }) => <Icon color={color} size={size} name="person-outline" type="ionicon" />,
+};
+
+
 export const  BottomTabNav = ()=> {
   return (
     <Tab.Navigator
@@ -22,30 +48,17 @@ export const  BottomTabNav = ()=> {
     }}
     tabBar={(props) => <CustomTabBar {...props} />}
     >
-      <Tab.Screen name="Home" component={HomeScreen} options={{
-        header: () => <CustomAppBar />,
-        tabBarIcon: ({ color, size}) =>  <Icon color={color} size={size} name="home-outline" type="ionicon" />
-,
-      }} />
-      <Tab.Screen name="Schedule" component={ScheduleScreen} options={{
-        headerShown: false,
-        tabBarIcon: ({ color, size}) => <Icon  color={color} size={size}name="calendar-outline" type="ionicon" />,
-      }} />
+      <Tab.Screen name="Home" component={HomeScreen} options={HomeScreenOptions} />
+      <Tab.Screen name="Schedule" component={ScheduleScreen} options={ScheduleScreenOptions} />
       <Tab.Screen name="CreateEvent" component={CreateEvent}
-      options={{
-        tabBarIcon: ({ color, size}) => <Icon  color={color} size={40}name="add-circle-outline" type="ionicon" />,
-      }} />
+      options={CreateEventOptions} />
       <Tab.Screen name="Search" component={SearchScreen}
-      options={{
-        tabBarIcon: ({ color, size}) => <Icon  color={color} size={size}name="search-outline" type="ionicon" />,
-      }}/>
+      options={SearchScreenOptions}/>
       <Tab.Screen name="Profile" component={ProfileScreen}
-      options={{
-        tabBarIcon: ({ color, size}) => <Icon  color={color} size={size}name="person-outline" type="ionicon" />,
-      }}/>
+      options={ProfileScreenOptions}/>
     </Tab.Navigator>
   );
-}
+};
 
 
 

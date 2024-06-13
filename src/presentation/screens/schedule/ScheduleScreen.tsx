@@ -1,5 +1,5 @@
 import { View } from 'react-native';
-import { Agenda, } from 'react-native-calendars';
+import { Agenda } from 'react-native-calendars';
 import items from '../../../../data.json';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Text } from '@rneui/base';
@@ -7,7 +7,7 @@ import { Avatar, Card } from '@rneui/themed';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 const ScheduleScreen = () => {
 
-  //TODO: MAPEAR LOS EVENTOS QUE VIENEN DE SUPABAS COMO UN AGENDA ENTRY
+  //TODO!: MAPEAR LOS EVENTOS QUE VIENEN DE SUPABASE COMO UN AGENDA ENTRY
   const renderEvents = (event: any, firstItemInDay:boolean) => {
     return (
       <TouchableOpacity style={{marginRight: 10, marginTop: firstItemInDay ? 17 : 0, marginBottom:0}}>
@@ -22,7 +22,7 @@ const ScheduleScreen = () => {
           size={32}
           rounded
           title="Rd"
-          containerStyle={{ backgroundColor: "blue" }} />
+          containerStyle={{ backgroundColor: 'blue' }} />
 
           <Text style={{ color: 'white', fontSize: 15, textAlign: 'left', marginLeft: 10, alignSelf:'center' }}>Productor del Evento</Text>
           </View>
@@ -33,7 +33,7 @@ const ScheduleScreen = () => {
   return (
 
 
-    <SafeAreaView edges={['top']} style={{ flex: 1 }}>
+    <SafeAreaView edges={['top']} style={{ flex: 1, backgroundColor: '#2f323f' }}>
       <View style={{ flex: 1 }}>
 
         <View style={{ flex: 1 }}>

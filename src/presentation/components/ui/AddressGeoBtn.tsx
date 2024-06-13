@@ -42,9 +42,9 @@ const AddressGeoBtn = ({ lat, lng }: Props) => {
 
 
   return (
-    <View style={{ marginBottom: 40, position: 'absolute', bottom: 100, right: 20 }}>
+    <View style={{ marginHorizontal: 10, position: 'absolute', bottom: 100, right: 20, left:20 }}>
 
-      <Text style={{ color: 'black', fontSize: 20, fontWeight: 'bold', textAlign: 'center' }}>Confirma tu Ubicación:</Text>
+      <Text style={{ color: '#000000', fontSize: 20, fontWeight: 'bold', textAlign: 'center' }}>Confirma tu Ubicación:</Text>
       {
         !hasLocation
           ? <Text>No hay ubicación</Text>

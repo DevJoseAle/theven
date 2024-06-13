@@ -2,6 +2,7 @@ if (__DEV__) {
     require('./ReactotronConfig');
     console.tron = Reactotron;
   }
+  import 'react-native-devsettings/withAsyncStorage';
 
 /**
  * @format

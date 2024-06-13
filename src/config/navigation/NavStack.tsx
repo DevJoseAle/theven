@@ -72,7 +72,6 @@ export const NavStack = () => {
       <Stack.Screen name="Permission" component={PermissionScreen} />
       <Stack.Screen name="Event" component={EventScreen}  options={{
         headerShown: false,
-        BottomTabNav: {visible: false},
       }}/>
     </Stack.Navigator>
   );

@@ -1,5 +1,11 @@
 import {StyleSheet} from 'react-native';
-export const primaryColor  = '#457C9E';
+
+//Colores globales: 
+export const globalWhite = '#EBEBEB';
+export const ratingColor =  '#FFD558';
+export const primaryColor  = '#fe4655';
+export const globalBackgroundColor = '#2F323F';
+
 
 export const globalStyles = StyleSheet.create({
   btnPrimary: {
